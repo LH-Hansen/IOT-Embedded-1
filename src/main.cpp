@@ -1,15 +1,26 @@
-#include <Arduino.h>
+#include <SPI.h>
+#include <WiFiNINA.h>
 
-// put function declarations here:
-int myFunction(int, int);
+#include "examples/scan_wifi.h"
+#include "examples/conn_wpa.h"
+#include "examples/ssl_client.h"
+#include "examples/web_server.h"
+
+ScanWifi scan_wifi;
+ConnWPA conn_wpa;
+SSLClient ssl_client;
+WebServer web_server;
 
 void setup() {
-  Serial.begin(115200);
+  // scan_wifi.begin();
+  // conn_wpa.begin();
+  // web_server.begin();
+    ssl_client.begin();
 }
 
-void setup() 
-{
-  
-  while(!Serial);
-  Serial.println("Serial terminal is connected!");
+void loop() {
+  // scan_wifi.update();
+  // conn_wpa.update();
+  // web_server.update();
+    ssl_client.update();
 }
