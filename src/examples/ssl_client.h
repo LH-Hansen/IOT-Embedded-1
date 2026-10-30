@@ -20,5 +20,5 @@ private:
 
     WiFiSSLClient client;
 
-    void printWiFiStatus()
+    void printWiFiStatus();
 };
